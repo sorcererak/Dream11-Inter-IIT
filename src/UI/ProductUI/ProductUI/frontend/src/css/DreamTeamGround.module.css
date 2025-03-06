@@ -1,0 +1,217 @@
+.bgImageHolder {
+  background-color: black;
+  /* background-image: var(--ground-image-url); */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/Test2.jpeg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.bottomDock {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  margin-left: 1em;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 35px;
+  height: 25vh;
+}
+
+.dockList {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2%;
+  margin: 0;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 1em;
+}
+.dockList::-webkit-scrollbar {
+  width: 0;
+}
+
+.bottomDock h2 {
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 40px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  padding: 1%;
+  margin-bottom: -2%;
+  margin-left: 2%;
+}
+
+/* Wrapper for the dock list and the arrow button */
+.dockListWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.arrowButton {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  padding: 1%;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+.rightArrow {
+  right: -1%;
+}
+.leftArrow {
+  left: 1%;
+}
+
+.arrowButton.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Add hover effect for better interaction */
+.arrowButton:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #e65100; /* Slightly darker orange */
+}
+
+.weatherCardContainer {
+  padding: 0;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 220px;
+  height: 120px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dreamPointsCard {
+  padding: 0;
+  position: fixed;
+  top: 10px;
+  right: 1vw;
+  width: 240px;
+  z-index: 999;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.dropZone {
+  color: white;
+  border: 2px white;
+  border-style: dashed;
+  border-radius: 10px;
+  height: 20vh;
+  width: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropZone p {
+  font-weight: bolder;
+  color: white;
+}
+
+.centerH1 {
+  position: absolute;
+  width: 550px;
+  /* height: 110px; */
+  top: 27vh;
+  left: 31vw;
+
+  /* font-family: "Calistoga";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 65px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    0deg,
+    #668500 7.43%,
+    #668500 29.13%,
+    #668500 94.6%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);  */
+}
+
+/* Apply transition for move, scale, and opacity */
+.playerCardContainer {
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.playerCardContainer.moveAsideAndFade {
+  opacity: 0.4;
+  transform: translateX(5px) translateY(5px);
+}
+
+/* The container that will display the screenshot */
+.screenshotContainer {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.screenshotContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.shareButtonsContainer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.closeButton {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}

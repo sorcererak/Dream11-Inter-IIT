@@ -1,0 +1,200 @@
+.cardStackContainer {
+  background-image: url("../assets/matches/bgimage.webp");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.cardContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.cardStack {
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  width: 45vw;
+  margin-top: 1rem;
+  min-width: 325px;
+  max-width: 375px;
+  height: 65vh;
+  border-radius: 15px;
+  padding: 0 0.5em;
+  background-color: white;
+  transition: transform 0.5s ease, scale 0.5s ease;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.find{
+  position: relative;
+  left: 42vw;
+  width: 45vw;
+  font-size: 2rem;
+  margin: 0.25rem 0;
+  color: white;
+}
+.cardStack::-webkit-scrollbar {
+  width: 0px;
+}
+
+.calenderMatchCardWrapper {
+  padding: 0;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.matchCardList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.matchCardList h4 {
+  margin-top: 1%;
+  font-size: 1.25rem;
+  color: red;
+}
+
+.customMatchBtn {
+  background-color: rgb(232, 240, 219);
+  width: 60%;
+  font-size: 1rem;
+  margin: 10px auto;
+  border: 0.2px solid green;
+}
+.customMatchDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.progressBarWrapper {
+  width: 45vw;
+  max-width: 375px;
+  margin: 5em auto 0 auto;
+  position: relative;
+}
+
+.barmarkerContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color: #fcf8f8;
+}
+
+.barmarker {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  margin-top: 5px;
+}
+
+progress {
+  color: transparent;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.progress::-webkit-progress-bar {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.progress::-webkit-progress-value {
+  background-color: #f44f52;
+  border-radius: 10px;
+}
+
+.calender {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  margin: -2% auto 0.2em;
+}
+.headmatch {
+  text-align: center;
+  color: black;
+  padding: 0;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-family: 'Poppins';
+  margin: 1rem 0 0 0;
+  font-weight: bold;
+}
+
+.noMatchesDiv {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.customMatchBtn {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.customMatchBtn:hover {
+  background-color: #e60000;
+}
+
+/* Hide the scrollbar but keep the functionality for Webkit-based browsers (Chrome, Safari, etc.) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  /* Hide scrollbar for all browsers */
+  overflow: -moz-scrollbars-none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+/* If you want the scrollbar to still be invisible but with a smooth scrolling effect */
+.hide-scrollbar {
+  overflow: scroll; /* Ensures the content is scrollable */
+  scroll-behavior: smooth; /* Optional: For smooth scrolling */
+}
+

@@ -1,0 +1,76 @@
+.cardContainer {
+    width: 20vh;
+    height: 20vh;
+    position: relative;
+    word-wrap: break-word;
+    font-size: 10px;
+    background-color: #dbd4d4;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .cardMedia {
+    height: 70px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .avatar {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+  }
+  
+  .iconButton {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: absolute;
+    top: -0.5%;
+    left: -0.5%;
+  }
+  
+  .cardContent {
+    text-align: left;
+    padding: 0.5rem;
+  }
+  
+  .name {
+    font-size: 0.8rem;
+    font-weight: 800;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .pointsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pointsText {
+    font-size: 0.6rem;
+    line-height: 0.2rem;
+  }
+  
+  .addButton {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  

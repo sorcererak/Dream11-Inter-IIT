@@ -1,0 +1,27 @@
+.noMatches {
+    text-align: center;
+    color: #555;
+    background: url("../../assets/HomePage/noMactches.svg") no-repeat center;
+    background-size: 200px;
+    padding: 125px 20px 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .noMatches h3 {   
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .noMatches a {
+    color: #747f8b;
+    text-decoration: underline;
+  }
+
+  .noMatches p{
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .noMatches p:hover{
+    transform: translateY(-1px);
+  }
+  

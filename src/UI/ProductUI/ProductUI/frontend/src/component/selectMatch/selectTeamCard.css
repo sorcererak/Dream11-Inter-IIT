@@ -1,0 +1,138 @@
+.search-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: black;
+  height: 100%;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.team-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+  text-align: center;
+  height: 120px;
+}
+.team-icon img {
+  margin: auto;
+}
+
+.team-icon p {
+  margin-top: 8px auto 8px;
+  font-size: 0.8rem;
+}
+.fav-teams-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.selected-team-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /* margin-top: 20%; */
+  height: 60vh;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glass-overlay {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px) brightness(0.7);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.team-name-title {
+  margin-top: 20px;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-align: center;
+}
+
+.no-teams-error {
+  color: #d9534f;
+  padding: 2px;
+  background-color: #f9e8e9;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 10px;
+  justify-content: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 60vh;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.teams-grid::-webkit-scrollbar {
+  overflow: hidden;
+  display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+
+.team-item.empty {
+  margin-top: 100px;
+  visibility: hidden; /* Hide the empty divs */
+}
+
+.search-card {
+  padding: 20px;
+}
+
+.teams-grid {
+  scroll-behavior: smooth;
+  max-height: 46vh;
+  overflow-y: scroll; /* Enable scrolling */
+}
+
+/* Hide the scrollbar */
+.teams-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: You can still keep the scrollbar functionality in Firefox with these settings */
+.teams-grid {
+  scrollbar-width: none; /* Firefox */
+}
+
+.selected-team-card {
+  overflow: hidden; /* This hides the scrollbar */
+  width: 70%; /* Keep your previous styling */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+

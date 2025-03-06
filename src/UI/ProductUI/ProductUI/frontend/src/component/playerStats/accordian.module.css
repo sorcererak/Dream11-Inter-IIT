@@ -1,0 +1,21 @@
+.accordionDiv {
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px;  */
+    /* padding: 20px; */
+    max-width: 90%; 
+    margin: 0 auto; 
+    overflow: hidden;
+  }
+  
+  .accordionItem {
+    background-color: #f5f5f5; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 5px 0; 
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  .accordionItem:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+  }

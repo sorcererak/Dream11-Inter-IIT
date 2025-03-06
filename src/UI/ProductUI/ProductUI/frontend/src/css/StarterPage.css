@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: end;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem; /* Add padding for smaller screens */
+  background-image: url('../assets/landing_page/landing.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.content-container {
+  text-align: center; /* Center-align content for better mobile experience */
+  z-index: 2;
+  margin: 0 auto;
+  transform: translateY(1rem);
+}
+
+.welcome-text {
+  font-size: 3rem; /* Reduce font size for smaller screens */
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  width: em;
+  display: flex;
+  flex-direction: column;
+}
+
+.lets {
+  margin-top: 15px;
+  /* margin-left: 3px; */
+  display: block;
+  font-size: 2rem; 
+  font-family: Lato, sans-serif;
+}
+
+.red{
+  color: #df2228;
+}
+
+.welcome{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 5rem;
+}
+.dream11{
+  margin-left: 1rem;
+  display: inline;
+  width: 4em;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  align-items: center;
+  gap: 1rem; /* Adds spacing between input and button */
+  margin-top: 1rem;
+}
+
+.outlined-name {
+  font-size: 1rem;
+  width: 100%; /* Make input responsive */
+  max-width: 350px; /* Limit the width on larger screens */
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.next-btn {
+  color: #df2228;
+  background-color: black;
+  font-family: 'Poppins';
+  border: none;
+  font-size: 1rem; /* Adjust button size */
+  font-weight: 400;
+  height: 3rem;
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  border: 2px solid #df2228;
+  transform: translateY(2em);
+}
+
+.next-btn:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid #df2228;
+  font-weight: 400;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row; /* Switch to horizontal layout */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4rem;
+  }
+
+  .content-container {
+    text-align: left;
+    margin-left: 4rem;
+    transform: translateY(3rem);
+  }
+
+  .welcome-text {
+    font-size: 4rem;
+  }
+
+  .lets {
+    /* font-size: 2.5rem; */
+  }
+
+  .dream11 img {
+    width: 4rem;
+    transform: translateY(3rem);
+  }
+
+  .form-container {
+    flex-direction: row; /* Align input and button horizontally */
+  }
+
+  .next-btn {
+    width: auto;
+  }
+}
+/* StarterPage.css */
+
+/* Typing animation for the text */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Make the text appear progressively in typing effect */
+.lets {
+  font-size: 2rem;
+  display: inline-block;
+  overflow: hidden; /* Hide text not yet typed */
+  white-space: nowrap;
+  border-right: 4px solid #e6e6e6; /* Simulate typing cursor */
+  animation: typing 3s steps(50) 1s 1 normal forwards;
+  color: #fcf3f2;
+}
+

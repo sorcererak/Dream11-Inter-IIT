@@ -1,0 +1,458 @@
+.playerStatCard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: rgba(255, 255, 255, 0.2); /* Translucent background */
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  padding: 20px 20px 10px 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.topPanel {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  width: 100%;
+  align-items: center;
+}
+
+.nameTypeData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10%;
+  width: 100%;
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  border-radius: 10px;
+}
+
+.bgImageProfile {
+  height: 250px;
+  width: 300px;
+  border-radius: 6%;
+}
+.chartProfile {
+  height: 15vh;
+  max-height: 200px;
+  width: 40vw;
+  max-width: 500px;
+  border-radius: 6%;
+}
+.playerImageProfile {
+  height: 60%;
+  width: 40%;
+  position: relative;
+  top: 40%;
+  left: 2%;
+}
+
+.blackCover {
+  height: 100%;
+  width: 100%;
+  border-radius: 6%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+}
+.profileName {
+  padding-top: 1%;
+  margin-left: 2.5%;
+  margin-bottom: 1%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: start;
+  line-height: 2.5rem;
+}
+.lastName {
+  font-size: 3rem;
+  color: red;
+  font-weight: 800;
+}
+
+.profiledata {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+  border-radius: 10px;
+  margin: 0 5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* width: 400px; */
+}
+
+.removeBtn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: background 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bottomPanel {
+  padding-top: 2%;
+  flex-grow: 0.9;
+}
+
+.accordionDiv {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Individual Accordion */
+.accordionItem {
+  margin-bottom: 10px;
+}
+
+.accordionSummary {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around; /* Equal spacing */
+  margin-bottom: 16px;
+  gap: 2px;
+}
+
+/* Style for inline buttons (acting like text) */
+.inlineButton {
+  flex-grow: 0.3;
+  display: inline-block; /* Makes the button behave like inline text */
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  text-transform: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  text-align: center;
+  background-color: transparent; /* No background color */
+}
+
+/* Style when selected */
+.selectedButton {
+  border-color: #3f51b5; /* Border color when selected */
+  color: #3f51b5; /* Text color when selected */
+  font-weight: bold;
+}
+
+/* Style when not selected */
+.deselectedButton {
+  color: #757575; /* Color for unselected state */
+}
+
+.statspng {
+  margin-right: 3rem;
+}
+
+/* For mobile responsiveness, ensure buttons fit in smaller spaces */
+@media (max-width: 600px) {
+  .buttonContainer {
+    gap: 2px;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    align-items: center;
+  }
+  .inlineButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.tabHeader nav {
+  padding: 0;
+}
+.playerdesc {
+  margin-top: 2%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  min-width: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: 5%;
+}
+
+.audio{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Audio container for icon and loader */
+.audio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  gap: 5px; /* Small space between the icon and loader */
+}
+
+/* Icon button styling */
+.iconButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px; /* Adjust size of the button */
+  height: 20px; /* Adjust size of the button */
+}
+
+/* Icon size (volume icon) */
+.iconButton svg {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Loader styling */
+.loader {
+  width: 16px !important; /* Make loader smaller */
+  height: 16px !important; /* Make loader smaller */
+}
+
+/* Tooltip styling */
+.MuiTooltip-tooltip {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 12px;
+}
+
+
+.playerdesc::-webkit-scrollbar {
+  width: 0;
+}
+
+.playerdesc h3 {
+  margin-top: 2%;
+  width: 100%;
+  text-align: left;
+  padding-left: 2%;
+  color: white;
+}
+
+.playerdesc p {
+  text-align: left;
+  padding: 0 2%;
+  color: #999;
+}
+
+.playerdesc {
+  margin-top: 2%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.85
+  ); /* Darker background for a sleek, futuristic look */
+  border-radius: 12px;
+  min-width: 400px; /* Wider minimum width for better text display */
+  /* max-height: 300px; */
+  margin-left: 5%;
+  overflow-y: scroll;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace; /* Monospace font for a more robotic feel */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+.playerdesc::-webkit-scrollbar {
+  width: 0px; /* Visible scrollbar */
+}
+.playerdesc::-webkit-scrollbar-thumb {
+  background-color: #666; /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.audio h3 {
+  margin-top: 0;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  color: #00ff7f;
+  /* color:white; */
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase for a more robotic touch */
+}
+
+.playerdesc p {
+  text-align: left;
+  padding: 0 10px;
+  color: #ddd; /* Slightly lighter text for readability */
+  line-height: 1.6;
+  font-size: 14px;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+/* Typing effect animation */
+@keyframes type {
+  0% {
+    width: 0;
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+.playerdesc p.typing {
+  width: 0;
+  animation: type 2s steps(30) 1s forwards, blink 0.7s step-end infinite; /* Typing animation */
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* Cricketer Role */
+.profileRole {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3f51b5;
+  margin-top: 10px;
+}
+
+/* Cricketer Bio Section */
+.bioSection {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bioSection p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6rem;
+}
+
+/* Profile Details (Batting/Bowling) */
+.playerStats {
+  margin-top: 20px;
+}
+
+.statsTitle {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.statItem {
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.statItem span {
+  color: #757575;
+}
+
+/* Flexbox Layout for Stats */
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.statItemWrapper {
+  flex: 1 1 calc(33.33% - 15px);
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statItemWrapper p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.bottomTop {
+  display: "flex";
+  /* flex-direction: row;
+  justify-content: space-between;
+  width: "100%";
+  gap: "5%"; */
+}
+
+.imgplusdesc {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .profiledata {
+    padding: 15px;
+  }
+
+  .profileName {
+    font-size: 1.8rem;
+  }
+
+  .profileRole {
+    font-size: 1.2rem;
+  }
+
+  .bioSection {
+    margin-top: 15px;
+  }
+
+  .playerStats {
+    margin-top: 15px;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+  }
+
+  .statItemWrapper {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+}

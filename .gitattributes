@@ -1,1 +1,6 @@
 *.mov filter=lfs diff=lfs merge=lfs -text
+src/UI/ProductUI/ProductUI/backend/app/product_ui_model/src/data/procesed/final_training_file_test.csv filter=lfs diff=lfs merge=lfs -text
+src/UI/ProductUI/ProductUI/backend/app/utils/aggregated_total_data.csv filter=lfs diff=lfs merge=lfs -text
+src/UI/ProductUI/ProductUI/backend/app/product_ui_model/src/data/procesed/final_training_file_odi.csv filter=lfs diff=lfs merge=lfs -text
+src/UI/ProductUI/ProductUI/backend/app/product_ui_model/src/data/procesed/final_training_file_t20.csv filter=lfs diff=lfs merge=lfs -text
+src/UI/ProductUI/ProductUI/backend/scripts/player_details.py filter=lfs diff=lfs merge=lfs -text

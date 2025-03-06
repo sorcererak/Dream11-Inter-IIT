@@ -1,0 +1,169 @@
+.matchDetailsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to start to avoid centering issues */
+  gap: 15px;
+  padding: 80px 40px 0 40px; 
+  position: relative;
+  height:100vh; 
+  overflow: hidden;
+}
+.teamNamesCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teamHeader {
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teamLogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.teamName {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+ 
+/* .matchHeading {
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; 
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; 
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 5; 
+  }
+  
+   */
+  .teamCard {
+    flex: 1;
+    max-width: 315px;
+    max-height: 87vh; 
+    overflow-y: scroll; 
+    text-align: center;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+    /* Hide scrollbar but enable scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Hide scrollbar thumb and track */
+  }
+  
+  .teamCard::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .teamCard::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make scrollbar thumb invisible */
+  }
+  
+  .teamCard::-webkit-scrollbar-track {
+    background-color: transparent; /* Make scrollbar track invisible */
+  }
+  .matchDetailsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 8%; /* Keeps the card in the correct vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered horizontally */
+    width: 500px; /* Fixed width for the card */
+    text-align: center;
+    z-index: 4; /* Ensures card stays above the batsman image */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: white; /* Add background to make the card visible against the image */
+  }
+  
+  .batsmanImg {
+    position: fixed;
+    top: 65%; /* Position the image vertically at the center */
+    left: 50%; /* Position the image horizontally at the center */
+    transform: translate(-50%, -50%); /* Center the image completely */
+    width: 55vw; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Ensure the image stays behind the card */
+    opacity: 0.5; /* Optional: Add transparency if the image should be subtle */
+    pointer-events: none; /* Ensures the image does not interfere with user interactions */
+  }
+  .weathercard{
+    background-color: black;
+    margin-top: 2vh;
+    width:15vw;
+    height:20vh;
+    border:1px solid black;
+    border-radius: 8px;
+  
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.weathercard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+
+}
+  .weatherAndPitchContainer {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .weathercard {
+    margin-bottom: 10px;
+  }
+  .pitchcard {
+    width: 100%;
+  }
+  .headToHeadContainer {
+    position: absolute;
+    bottom: 10; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 47vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

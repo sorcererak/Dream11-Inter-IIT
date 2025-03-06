@@ -1,0 +1,186 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+
+}
+
+.match-card {
+  position: relative;
+width:auto;
+min-width:30em;
+  
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  overflow: hidden;
+ 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  color: var(--text);
+  justify-content: space-around;
+  z-index:2;
+}
+
+.match-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+.match-type {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #676565; 
+  text-align: center;
+  align-self: center;
+  margin-bottom: 4px;
+}
+.match-date {
+
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.match-date .icon {
+  margin-right: 8px;
+  font-size: 10px;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+
+}
+
+.team-logo {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.2s ease-in-out;
+  align-items: center;
+}
+
+.team-logo:hover {
+  transform: scale(1.1); 
+}
+
+.vs {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff4d4f;
+}
+
+.match-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.match-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 2px;
+  font-size: 1rem;
+  color: #888;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 1px 0;
+}
+
+.team-name {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #555;
+}
+.event-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #555;
+}
+.officials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.referee,
+.umpires {
+  
+  font-size: 14px; /* Adjust font size if needed */
+  color: #333; /* Adjust text color */
+}
+
+.officials strong {
+  color: #555;
+  margin-left: 20px;
+}
+
+
+.separator {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    width: 22em; /* Keep width more compact for smaller screens */
+    min-height: 16em; /* Fixed minimum height */
+    padding: 12px;
+  }
+
+  .team-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .match-type {
+    font-size: 1rem;
+  }
+
+  .vs {
+    font-size: 1.1rem;
+  }
+
+  .match-details p {
+    font-size: 0.85rem;
+  }
+}

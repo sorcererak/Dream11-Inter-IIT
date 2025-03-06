@@ -1,0 +1,276 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow-x:hidden;
+}
+a {
+  color: var(--bg);
+  border-color: var(--bg);
+}
+
+.hidescroll {
+  overflow-y: scroll;
+}
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Lato";
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+/*header*/
+nav {
+  background: transparent;
+  color: var(--red);
+  height: 65px;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 13px;
+  box-sizing: border-box;
+}
+
+.logo {
+  float: left;
+  font-size: 30px;
+  font-weight: bolder;
+  width: 160px;
+  height: 40px;
+  content: url("https://fontmeme.com/permalink/210112/8d0b909f7a074e3bc471a4075716c07e.png");
+}
+
+.logo a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: var(--red);
+}
+
+.search-bar {
+  float: right;
+}
+
+.search-input {
+  background: none;
+  color: gray;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 15px;
+  width: 250px;
+  height: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+  position: relative;
+}
+
+.search-values {
+  background: #0d0d0d;
+  width: 265px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 2px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  z-index: 1;
+}
+
+.search-values ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+.search-values ul li {
+  margin: 8px;
+}
+
+.search-values a {
+  text-decoration: none;
+  color: gray;
+}
+
+.search-values a:hover {
+  /* text-decoration: underline; */
+  font-weight: 600;
+}
+
+.bgImage {
+  height: 750px;
+  width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  z-index: 0;
+  animation: 6s ease-in-out infinite alternate moving;
+}
+@keyframes moving {
+  0% {
+    background-size: 300%;
+    background-position: 60% 80%;
+  }
+  50% {
+    background-size: 250%;
+    background-position: 55% 55%;
+  }
+  100% {
+    background-position: 60% 40%;
+    background-size: 280%;
+  }
+}
+
+.popularInfo {
+  position: absolute;
+  top: 20%;
+  left: 6%;
+  width: 40%;
+}
+
+.popularInfo h1 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.popularInfo button {
+  background: #cc0000;
+  color: white;
+  height: 50px;
+  width: 200px;
+  margin-top: 20px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid red;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.popularInfo button:hover {
+  background: #e60000;
+}
+
+.switchImg {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.switchImg div {
+  width: 50px;
+  height: 5px;
+  background: gray;
+
+  border-radius: 2px;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.switchImg div.active {
+  background: #dfdddd;
+}
+
+/*lists of matches*/
+.lists {
+  margin: 10px 0;
+}
+
+.lists:first-child {
+  margin-top: 20px;
+}
+
+
+.menu-item {
+  padding: 0px;
+  margin: 5px 2px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper.active {
+  border: 1px var(--red);
+}
+.menu-item.active {
+  border: 1px var(--red);
+}
+
+.movie-card {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  transition: all 0.7s;
+  background: black;
+  margin: auto;
+}
+
+img {
+  width: 300px;
+  height: 180px;
+  vertical-align: 0px;
+  transition: all 0.7s;
+  user-select: none;
+}
+
+.movie-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  white-space: initial;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.2, 1.2);
+  filter: brightness(0.7);
+
+  z-index: 2;
+}
+
+.movie-card:hover .movie-title {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scroll-menu-arrow {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.horizontal-menu {
+  height: 220px;
+}
+
+.arrow-prev,
+.arrow-next {
+  color: gray;
+  font-size: 30px;
+}
+
+
+
+

@@ -1,0 +1,123 @@
+.dream11Footer {
+  background-color: #212121; /* Dark background for a modern, sleek look */
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+
+.dream11TopSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0 5rem; /* Add padding to shift content slightly inward */
+}
+
+.dream11LogoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 3rem; /* Shift slightly toward the center */
+}
+
+.dream11Logo img {
+  width: 200px; /* Adjusted size for better fit */
+  height: auto;
+}
+
+.dream11SocialMedia {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dream11Icon {
+  font-size: 1.3rem; /* Slightly smaller icon size */
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.dream11Icon:hover {
+  color: var(--red); 
+  cursor: pointer;
+}
+
+.dream11Separator {
+  width: 100%;
+  border-top: 1px solid #333; /* Subtle separator */
+  margin: 1.5rem 0;
+}
+
+.dream11SeparatorVertical {
+  width: 1px;
+  height: 100%;
+  border-left: 2px solid #333;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.dream11LinksSection {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dream11Column {
+  text-align: left;
+  margin: 0.5rem;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+.dream11Column a {
+  color: white;
+  font-size: 0.9rem; /* Reduced font size */
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dream11Column a:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.dream11CorporateOffice {
+  font-size: 0.8rem; /* Reduced font size */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #ffffff !important;
+}
+
+.dream11BottomSection {
+  margin-bottom: 1rem;
+}
+
+.dream11BottomSection a {
+  margin: 0 1rem;
+  color: white;
+  font-size: 0.8rem; /* Reduced font size */
+  text-decoration: none;
+}
+
+.dream11BottomSection a:hover {
+  color: var(--red); 
+  cursor: pointer;
+}
+
+.dream11Disclaimer {
+  font-size: 0.7rem; /* Smaller disclaimer font size */
+  font-weight: bold;
+  color: #ffffff !important;
+  margin-top: 1rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  text-align: center;
+}

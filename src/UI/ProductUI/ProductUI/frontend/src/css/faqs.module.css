@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+.heading {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    line-height: 3.5rem;
+    color: var(--red);
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+/* FAQ Section Container */
+.faqContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* FAQ Content Styling */
+.faqContent {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Section Styling */
+.contactSection {
+    flex: 0.5;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 12rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Shootmail Icon */
+.shootmailicon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust the shootmail image size */
+.shootmail {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Heading adjustments on small screens */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem; /* Smaller font size */
+        text-align: center; /* Center-align the heading */
+    }
+
+    .faqContainer {
+        flex-direction: column; /* Stack FAQ and contact sections vertically */
+        padding: 1rem; /* Less padding for mobile */
+    }
+
+    .faqContent {
+        flex: none;
+        margin-bottom: 2rem; /* Space between FAQ and contact */
+    }
+
+    .contactSection {
+        flex: none;
+        margin-top: 1rem; /* Adjust top margin */
+        width: 100%; /* Take full width on small screens */
+    }
+
+    /* Reduce the button size */
+    .MuiButton-root {
+        width: 100%; /* Make button full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.6rem; /* Further reduce size for very small screens */
+    }
+
+    .faqContent {
+        padding-left: 0; /* Remove padding on left side */
+        padding-right: 0; /* Remove padding on right side */
+    }
+
+    .shootmail {
+        height: 40px; /* Reduce size of icon */
+    }
+}

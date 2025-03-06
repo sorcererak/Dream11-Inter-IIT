@@ -1,0 +1,53 @@
+/* Import Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Container for the Calendar component */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 0.25rem;
+}
+
+/* Heading section with the icon and title */
+.heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+}
+
+/* Calendar icon styles */
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Title text in the heading */
+.title {
+  /* font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0; */
+  margin-left: 0.15rem;
+}
+
+/* Calendar styles */
+.MuiPickersCalendar-root {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+.calendar{
+    padding: 0;
+    margin: 0;
+    /* padding-bottom: -20px; */
+    /* border: 1px solid #9D9E9F99; */
+}

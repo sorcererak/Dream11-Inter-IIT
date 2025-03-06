@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+.aboutUsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 6rem;
+    padding-top: 6rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    position: relative;
+    height: 65vh;
+  }
+  
+  /* Left Section: Image Grid */
+  .imageGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* flex: 1; */
+  }
+  
+  .imageBox {
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1rem;
+  }
+  
+  .image1, .image2, .image3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .image1{
+    height: 193px;
+    width: 233px;
+  }
+
+  .image2{
+    height: 435px;
+    width: 360px;
+  }
+
+  .image3{
+    height: 226px;
+    width: 233px;
+  }
+  
+  .overlayImageBox {
+    position: relative;
+  }
+  
+  .overlayText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  /* Right Section: About Content */
+  .aboutContent {
+    flex: 1;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* padding: 2rem; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  .shadow {
+    position: absolute;
+    top: -390px;
+    left: -20px;
+    width: 220%;
+    height: 310%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .aboutbox{
+    padding: 2rem;
+    background: rgba(255, 255, 255,0.9);
+    z-index: 2;
+  }
+  
+  .title {
+    font-family: "Inria Serif", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #c00;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    z-index: 2;
+    position: relative;
+  }
+  
+  @media (max-width: 950px) { 
+    .aboutUsContainer {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      position: relative;
+    }
+    .imageGrid {
+      width: 100%;
+      justify-content: center;
+      height: 40vh;
+    }
+    .image1{
+      height: 20vh;
+    }
+  }
+
+  @media (min-width: 950px) and (max-width: 1050px) { 
+    .aboutUsContainer {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      position: relative;
+    }
+    .imageGrid {
+      width: 40%;
+      justify-content: center;
+      height: auto;
+    }
+    /* .image1{
+      height: 20vh;
+    } */
+  }
