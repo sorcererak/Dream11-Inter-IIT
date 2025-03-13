@@ -1,4 +1,4 @@
-<h1 align="center" id="title">D.R.E.A.M.</h1>
+<h1 align="center" id="title">D.R.E.A.M.11</h1>
 
 <h2 align="center" id = "description">Team 30 Submission for Dream11 PS in the Inter IIT Tech Meet 13.0.</h2>
 
